@@ -14,7 +14,6 @@ A brief description of your project goes here. Explain what the project does, it
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
-![python](https://www.python.org/static/community_logos/python-powered-w-100x40.png)
 
 ## Installation
 
@@ -135,4 +134,7 @@ For any inquiries or support requests, please contact us at support@example.com.
 ## Conclusion
 
 Congratulations! You have successfully created a comprehensive README file for your Python-based project. Remember to keep it updated as your project evolves and add any necessary sections or information specific to your project's requirements.
+![python](https://www.python.org/static/community_logos/python-powered-w-100x40.png)
+
+
  
