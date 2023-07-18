@@ -1,7 +1,7 @@
 # alx_python 
 
 
-![python]([./images/1.jpg](https://www.python.org/static/img/psf-logo@2x.png))
+![python](https://www.python.org/static/img/psf-logo@2x.png)
 ## Description
 
 A brief description of your project goes here. Explain what the project does, its purpose, and any unique features or functionalities it offers. Use clear and concise language to provide an overview of the project.
