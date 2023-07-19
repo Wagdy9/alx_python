@@ -4,9 +4,9 @@ import random
 number = random.randint(-10000, 10000)
 
 # Calculate the last digit of the number
-last_digit = (abs) number % 10
+last_digit = (abs)number % 10
 if number < 0:
-    last_digit = - last_digit
+    last_digit = -last_digit
 
 # Print the last digit and its properties.
 print("Last digit of", number, "is", last_digit, "and is", end=" ")
