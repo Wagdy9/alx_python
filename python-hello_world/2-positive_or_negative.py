@@ -1,11 +1,9 @@
 import random
 
+# Generate a random number between -10 and 10
 number = random.randint(-10, 10)
 
-print(number)
-if number > 0:
-    print("is positive")
-elif number == 0:
-    print("is zero")
-else:
-    print("is negative")
+# Print the number along with its sign
+print(
+    f"{number} is {'negative' if number < 0 else 'zero' if number == 0 else 'positive'}"
+)
