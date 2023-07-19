@@ -6,7 +6,7 @@ number = random.randint(-10000, 10000)
 # Calculate the last digit of the number
 last_digit = number % 10
 
-# Print the last digit and its properties
+# Print the last digit and its properties.
 print("Last digit of", number, "is", last_digit, "and is", end=" ")
 if last_digit > 5:
     print("greater than 5")
