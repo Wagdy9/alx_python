@@ -8,7 +8,9 @@ def pow(a, b):
         for _ in range(-b):
             result /= a
     return result
-pow = __import__('1-power').pow
+
+
+pow = __import__("1-power").pow
 
 print(pow(2, 2))
 print(pow(98, 2))
