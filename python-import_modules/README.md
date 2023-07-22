@@ -141,8 +141,8 @@ print(mean_value)
 ```
 
 ![Python Module Importer](https://365datascience.com/resources/blog/thumb@1024_2018-07-image4-min-6.webp)
-![Python Module Importer](https://365datascience.com/resources/blog/thumb@1024_2018-07-image3-min-6-1024x572.webp)
 ![Python Module Importer](https://365datascience.com/resources/blog/thumb@1024_2018-07-image6-min-6.webp)
+![Python Module Importer](https://365datascience.com/resources/blog/thumb@1024_2018-07-image3-min-6-1024x572.webp)
 
 Feel free to explore these examples and modify them to suit your needs.
 
