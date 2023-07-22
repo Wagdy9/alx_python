@@ -1,8 +1,5 @@
 # Python Module Importer
 
-![Python Module Importer](https://365datascience.com/resources/blog/thumb@1024_2018-07-image4-min-6.webp)
-![Python Module Importer](https://365datascience.com/resources/blog/thumb@1024_2018-07-image3-min-6-1024x572.webp)
-![Python Module Importer](https://365datascience.com/resources/blog/thumb@1024_2018-07-image6-min-6.webp)
 Welcome to the Python Module Importer project! This project focuses on the fundamentals of importing modules in Python, enabling you to leverage existing code and expand the functionality of your projects. Whether you are a beginner or an experienced developer, this guide will provide you with all the necessary information and examples to master module imports.
 
 ## Table of Contents
@@ -139,6 +136,10 @@ numbers = [1, 2, 3, 4, 5]
 mean_value = mean(numbers)
 print(mean_value)
 ```
+
+![Python Module Importer](https://365datascience.com/resources/blog/thumb@1024_2018-07-image4-min-6.webp)
+![Python Module Importer](https://365datascience.com/resources/blog/thumb@1024_2018-07-image3-min-6-1024x572.webp)
+![Python Module Importer](https://365datascience.com/resources/blog/thumb@1024_2018-07-image6-min-6.webp)
 
 Feel free to explore these examples and modify them to suit your needs.
 
