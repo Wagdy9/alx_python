@@ -1,5 +1,7 @@
 # Python Module Importer
 
+![Python Module Importer](./images/1.jpg)
+
 Welcome to the Python Module Importer project! This project focuses on the fundamentals of importing modules in Python, enabling you to leverage existing code and expand the functionality of your projects. Whether you are a beginner or an experienced developer, this guide will provide you with all the necessary information and examples to master module imports.
 
 ## Table of Contents
