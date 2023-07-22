@@ -24,3 +24,5 @@ def validate_password(password):
         return True
     else:
         return False
+    
+print(validate_password("Wagdy123@"))
