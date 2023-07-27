@@ -2,25 +2,36 @@ def safe_print_division(a, b):
     try:
         result = a / b
     except ZeroDivisionError:
-        print("Inside result: None")
-        return None
+        result = None
     except TypeError:
-        print("Inside result: None")
-        return None
-    else:
+        result = None
+    finally:
         print("Inside result: {}".format(result))
         return result
-    finally:
-        print("Finally: Division operation completed")
 
 
 # Example usage
-a = 12
+a = 10
 b = 2
 result = safe_print_division(a, b)
 print("{:d} / {:d} = {}".format(a, b, result))
 
-a = 12
+a = 10
+b = -2
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))
+
+a = 0
+b = 2
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))
+
+a = 10
+b = 0
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))
+
+a = 0
 b = 0
 result = safe_print_division(a, b)
 print("{:d} / {:d} = {}".format(a, b, result))
