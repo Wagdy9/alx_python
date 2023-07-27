@@ -136,9 +136,7 @@ We appreciate your interest in our project!
 Thank you for taking the time to read the README.md file! We hope you find this project useful and educational. Happy coding with awesome data structures in Python!
 
 ![Project Screenshot](screenshot.png)
-```
-
-This example README.md file provides an overview of the project, explains the installation and usage instructions, outlines the contribution guidelines and licensing information, and provides additional resources and acknowledgments. It also includes placeholders for the project logo, screenshot, and contact information.
+es and acknowledgments. It also includes placeholders for the project logo, screenshot, and contact information.
 
 Feel free to customize the provided template to fit your specific project requirements and add any additional sections or information as needed.
  
