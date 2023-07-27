@@ -1,17 +1,17 @@
 import sys
 
-def print_arguments():
-    num_arguments = len(sys.argv) - 1
+def print_arguments(argv):
+    num_args = len(argv)
+    if num_args == 0:
+        print("0 arguments.")
+        print(":")
+    elif num_args == 1:
+        print("1 argument:")
+        print("1:", argv[0])
+    else:
+        print(num_args, "arguments:")
+        for i in range(num_args):
+            print(i + 1, ":", argv[i])
 
-    print("Number of argument(s):", num_arguments)
-
-    if num_arguments == 0:
-        print(".")
-        return
-
-    print("Arguments:")
-
-    for i in range(1, num_arguments + 1):
-        print(i, ":", sys.argv[i])
-
-print_arguments()
+if __name__ == "__main__":
+    print_arguments(sys.argv[1:])
