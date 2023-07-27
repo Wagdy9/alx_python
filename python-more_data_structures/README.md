@@ -126,8 +126,8 @@ We would like to express our gratitude to the following individuals and resource
 
 If you have any questions, suggestions, or feedback, please don't hesitate to contact us:
 
-- Project Maintainer: John Doe (john.doe@example.com)
-- Project Website: [https://github.com/your-username/awesome-data-structures](https://github.com/your-username/awesome-data-structures)
+- Project Maintainer: John Doe (wagdy311092@gmail.com)
+- Project Website: [https://github.com/wagdy9/python-more_data_structures](https://github.com/Wagdy9/alx_python/tree/main/python-more_data_structures)
 
 We appreciate your interest in our project!
 
