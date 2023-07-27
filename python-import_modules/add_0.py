@@ -1,4 +1,14 @@
-result = add_0.add(a, b)
-print(f"{a} + {b} = {result}")
+#!/usr/bin/python3
 
-__import__("0-add")
+
+def add(a, b):
+    """My addition function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a + b
+    """
+    return a + b
