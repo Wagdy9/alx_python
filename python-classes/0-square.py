@@ -11,7 +11,7 @@ print(type(my_square))
 print(my_square.__dict__)
 
 try:
-    print(my_square.size)
+    print(my_square.__size)  # Change 'size' to '__size'
 except AttributeError as e:
     print(e)
 
