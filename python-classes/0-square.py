@@ -1,35 +1,42 @@
+#!/usr/bin/python3
 """
-This module defines the Square class, which represents a square shape.
+My Square Class
 
-Classes:
-    Square: A class that defines a square shape.
+This module defines a simple Square class to represent squares in a two-dimensional space.
+The Square class has an attribute 'size' to store the size of the square. The size is a positive
+integer that represents the length of each side of the square.
+
+Attributes:
+    size (int): The size of the square, i.e., the length of each side.
+
+Methods:
+    __init__(self, size): Constructor method to initialize the Square object with a given size.
+
+Example:
+    # >>> square1 = Square(5)
+
+Note:
+    This implementation of the Square class does not perform type or value validation on the 'size' attribute.
+    It is assumed that the 'size' attribute will always be a positive integer.
 """
 
 
 class Square:
     """
-    A class that defines a square shape.
+    A class that represents a square.
 
     Attributes:
         __size (int): The size of the square.
 
     Methods:
-        __init__(self, size=0): Initializes a new instance of the Square class.
+        __init__(self, size): Initializes a Square object with the given size.
     """
 
-    def __init__(self, size=0):
+    def __init__(self, size):
         """
-        Initializes a new instance of the Square class.
+        Initializes a Square object with the given size.
 
         Args:
-            size (int, optional): The size of the square. Defaults to 0.
-
-        Raises:
-            TypeError: If size is not an integer.
-            ValueError: If size is less than 0.
+            size (int): The size of the square.
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
         self.__size = size
