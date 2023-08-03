@@ -22,24 +22,3 @@ print(my_square.dict_)
 my_square = Square()
 print(type(my_square))
 print(my_square.dict_)
-
-try:
-    my_square = Square("3")
-    print(type(my_square))
-    print(my_square.dict_)
-except Exception as e:
-    print(e)
-
-try:
-    my_square = Square(3.14)
-    print(type(my_square))
-    print(my_square.dict_)
-except Exception as e:
-    print(e)
-
-try:
-    my_square = Square(-89)
-    print(type(my_square))
-    print(my_square.dict_)
-except Exception as e:
-    print(e)
