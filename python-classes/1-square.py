@@ -6,35 +6,40 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
+    @property
+    def dict_(self):
+        return {"_Square__size": self.__size}
 
-my_square_1 = Square(3)
-print(type(my_square_1))
-print(my_square_1.__dict__)
 
-my_square_2 = Square()
-print(type(my_square_2))
-print(my_square_2.__dict__)
+my_square = Square(3)
+print(type(my_square))
+print(my_square.dict_)
+
+my_square = Square(89)
+print(type(my_square))
+print(my_square.dict_)
+
+my_square = Square()
+print(type(my_square))
+print(my_square.dict_)
 
 try:
-    print(my_square_1.size)
+    my_square = Square("3")
+    print(type(my_square))
+    print(my_square.dict_)
 except Exception as e:
     print(e)
 
 try:
-    print(my_square_1.__size)
+    my_square = Square(3.14)
+    print(type(my_square))
+    print(my_square.dict_)
 except Exception as e:
     print(e)
 
 try:
-    my_square_3 = Square("3")
-    print(type(my_square_3))
-    print(my_square_3.__dict__)
-except Exception as e:
-    print(e)
-
-try:
-    my_square_4 = Square(-89)
-    print(type(my_square_4))
-    print(my_square_4.__dict__)
+    my_square = Square(-89)
+    print(type(my_square))
+    print(my_square.dict_)
 except Exception as e:
     print(e)
