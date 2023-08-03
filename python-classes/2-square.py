@@ -1,11 +1,3 @@
-"""
-This module defines the Square class, which represents a square shape.
-
-Classes:
-    Square: A class that defines a square shape.
-"""
-
-
 class Square:
     """
     A class that defines a square shape.
@@ -15,9 +7,11 @@ class Square:
 
     Methods:
         __init__(self, size=0): Initializes a new instance of the Square class.
+        area(self): Calculates the area of the square.
     """
+
     def __init__(self, size=0):
-                """
+        """
         Initializes a new instance of the Square class.
 
         Args:
@@ -34,4 +28,10 @@ class Square:
         self.__size = size
 
     def area(self):
+        """
+        Calculates the area of the square.
+
+        Returns:
+            int: The area of the square.
+        """
         return self.__size**2
