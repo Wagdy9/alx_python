@@ -1,26 +1,20 @@
 class Square:
-    """
-    This class represents a Square.
-
-    Attributes:
-        __size (int): The size of the Square.
-    """
-
     def __init__(self, size):
-        """
-        Initializes a Square instance.
-
-        Args:
-            size (int): The size of the Square.
-        """
         self.__size = size
 
-    @property
-    def dict_(self):
-        """
-        Retrieves the Square attributes as a dictionary.
+    def __str__(self):
+        return f"Square({self.__size})"
 
-        Returns:
-            dict: A dictionary containing the Square attributes.
-        """
-        return self.__dict__
+my_square = Square(3)
+print(type(my_square))
+print(my_square.__dict__)
+
+try:
+    print(my_square.size)
+except Exception as e:
+    print(e)
+
+try:
+    print(my_square.__size)
+except Exception as e:
+    print(e)
