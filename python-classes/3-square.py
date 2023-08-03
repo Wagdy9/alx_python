@@ -1,3 +1,10 @@
+"""
+This module defines the Square class, which represents a square shape.
+Classes:
+    Square: A class that defines a square shape.
+"""
+
+
 class Square:
     """
     A class that defines a square shape.
