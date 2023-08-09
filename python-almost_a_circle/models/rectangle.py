@@ -83,34 +83,7 @@ This class represents a rectangle.
 
 * **__validate_width** (self, width):
     Validator for the width attribute.
-#!/usr/bin/python3
-""" Check """
-import inspect
-from models.rectangle import Rectangle
-
-area_fct = Rectangle.__dict__.get("area")
-if area_fct is None:
-    print("Rectangle doesn't have method area")
-    exit(1)
-
-if not inspect.isfunction(area_fct):
-    print("area is not a function")
-    exit(1)
-
-print("OK", end="")
-
-class Rectangle:
-    """Rectangle class"""
-
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize a new rectangle."""
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
-        self.id = id
-
-    def area(self):
-        """Calculate the area of the rectangle."""
-        return self.width * self.height
+    * **Arguments:**
+        * `width`: The width of the rectangle.
+    * **Raises** `TypeError` if `width
 
