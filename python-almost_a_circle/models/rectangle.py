@@ -30,65 +30,29 @@ Methods:
         Set the y coordinate of the rectangle.
 """
 
-from models.base import Base
+#!/usr/bin/python3
+""" 2-main """
+from models.rectangle import Rectangle
 
+if __name__ == "__main__":
+    try:
+        Rectangle(10, "2")
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
 
-class Rectangle(Base):
+    try:
+        r = Rectangle(10, 2)
+        r.width = -10
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
 
-    """Rectangle class"""
+    try:
+        r = Rectangle(10, 2)
+        r.x = {}
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
 
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize a new rectangle"""
-        super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-
-    @property
-    def width(self):
-        """Get the width of the rectangle"""
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """Set the width of the rectangle"""
-        if value <= 0:
-            raise ValueError("width must be positive")
-        self.__width = value
-
-    @property
-    def height(self):
-        """Get the height of the rectangle"""
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        """Set the height of the rectangle"""
-        if value <= 0:
-            raise ValueError("height must be positive")
-        self.__height = value
-
-    @property
-    def x(self):
-        """Get the x coordinate of the rectangle"""
-        return self.__x
-
-    @x.setter
-    def x(self, value):
-        """Set the x coordinate of the rectangle"""
-        if value < 0:
-            raise ValueError("x must be non-negative")
-        self.__x = value
-
-    @property
-    def y(self):
-        """Get the y coordinate of the rectangle"""
-        return self.__y
-
-    @y.setter
-    def y(self, value):
-        """Set the y coordinate of the rectangle"""
-        if value < 0:
-            raise ValueError("y must be non-negative")
-        self.__y = value
+    try:
+        Rectangle(10, 2, 3, -1)
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
