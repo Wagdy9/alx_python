@@ -3,44 +3,46 @@ Rectangle class
 
 This class represents a rectangle.
 
-Attributes:
-    width (int): The width of the rectangle.
-    height (int): The height of the rectangle.
-    x (int): The x coordinate of the rectangle.
-    y (int): The y coordinate of the rectangle.
+**Attributes:**
 
-Methods:
-    __init__(width, height, x=0, y=0, id=None):
-        Initialize a new rectangle.
-    width(self):
-        Get the width of the rectangle.
-    width(self, value):
-        Set the width of the rectangle.
-    height(self):
-        Get the height of the rectangle.
-    height(self, value):
-        Set the height of the rectangle.
-    x(self):
-        Get the x coordinate of the rectangle.
-    x(self, value):
-        Set the x coordinate of the rectangle.
-    y(self):
-        Get the y coordinate of the rectangle.
-    y(self, value):
-        Set the y coordinate of the rectangle.
+* **width** (int): The width of the rectangle.
+* **height** (int): The height of the rectangle.
+* **x** (int): The x coordinate of the rectangle.
+* **y** (int): The y coordinate of the rectangle.
 
-    __validate_width(self, width):
-        Validator for the width attribute.
-    __validate_height(self, height):
-        Validator for the height attribute.
-    __validate_x(self, x):
-        Validator for the x attribute.
-    __validate_y(self, y):
-        Validator for the y attribute.
-"""
+**Methods:**
 
-from models.base import Base
+* **__init__(width, height, x=0, y=0, id=None)**:
+    Initialize a new rectangle.
+* **width** (self):
+    Get the width of the rectangle.
+* **width** (self, value):
+    Set the width of the rectangle.
+* **height** (self):
+    Get the height of the rectangle.
+* **height** (self, value):
+    Set the height of the rectangle.
+* **x** (self):
+    Get the x coordinate of the rectangle.
+* **x** (self, value):
+    Set the x coordinate of the rectangle.
+* **y** (self):
+    Get the y coordinate of the rectangle.
+* **y** (self, value):
+    Set the y coordinate of the rectangle.
 
+* **__validate_width** (self, width):
+    Validator for the width attribute.
+* **__validate_height** (self, height):
+    Validator for the height attribute.
+* **__validate_x** (self, x):
+    Validator for the x attribute.
+* **__validate_y** (self, y):
+    Validator for the y attribute.
+
+* **area** (self):
+    """Returns the area of the rectangle"""
+    return self.__width * self.__height
 
 class Rectangle(Base):
 
@@ -129,3 +131,8 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
+
+    def area(self):
+        """Returns the area of the rectangle"""
+        return self.__width * self.__height
+
