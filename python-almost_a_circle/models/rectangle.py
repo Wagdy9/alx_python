@@ -129,5 +129,3 @@ class Rectangle(Base):
         """Validator for the y attribute."""
         if not isinstance(y, int):
             raise TypeError("y must be an integer")
-        if y < 0:
-            raise ValueError
