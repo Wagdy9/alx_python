@@ -15,11 +15,7 @@ class Rectangle(Base):
 
     Methods:
         area(): Returns the area of the rectangle.
-        display(): Prints the rectangle to stdout.
-        __str__(): Returns a string representation of the rectangle.
-        update(): Updates the attributes of the rectangle.
-        to_dictionary(): Returns a dictionary representation of the rectangle.
-    """
+        display(): Prints the rectangle to stdout with the character #."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes a new Rectangle object.
@@ -134,4 +130,7 @@ class Rectangle(Base):
         res_str = ""
         res_str += "\n" * self.y
         for i in range(self.height):
-            res_str += " " * self.x
+            res_str += "#" * self.width
+            if i != self.height - 1:
+                res_str += "\n"
+        print(res_str, end="")
