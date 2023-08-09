@@ -86,3 +86,4 @@ This class represents a rectangle.
     * **Arguments:**
         * `width`: The width of the rectangle.
     * **Raises** `TypeError` if `width
+
