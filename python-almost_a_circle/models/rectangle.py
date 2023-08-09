@@ -83,7 +83,4 @@ This class represents a rectangle.
 
 * **__validate_width** (self, width):
     Validator for the width attribute.
-    * **Arguments:**
-        * `width`: The width of the rectangle.
-    * **Raises** `TypeError` if `width
-
+"""
