@@ -1,7 +1,40 @@
+"""
+Rectangle class
+
+This class represents a rectangle.
+
+Attributes:
+    width (int): The width of the rectangle.
+    height (int): The height of the rectangle.
+    x (int): The x coordinate of the rectangle.
+    y (int): The y coordinate of the rectangle.
+
+Methods:
+    __init__(width, height, x=0, y=0, id=None):
+        Initialize a new rectangle.
+    width(self):
+        Get the width of the rectangle.
+    width(self, value):
+        Set the width of the rectangle.
+    height(self):
+        Get the height of the rectangle.
+    height(self, value):
+        Set the height of the rectangle.
+    x(self):
+        Get the x coordinate of the rectangle.
+    x(self, value):
+        Set the x coordinate of the rectangle.
+    y(self):
+        Get the y coordinate of the rectangle.
+    y(self, value):
+        Set the y coordinate of the rectangle.
+"""
+
 from models.base import Base
 
 
 class Rectangle(Base):
+
     """Rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
