@@ -28,31 +28,104 @@ Methods:
         Get the y coordinate of the rectangle.
     y(self, value):
         Set the y coordinate of the rectangle.
+
+    __validate_width(self, width):
+        Validator for the width attribute.
+    __validate_height(self, height):
+        Validator for the height attribute.
+    __validate_x(self, x):
+        Validator for the x attribute.
+    __validate_y(self, y):
+        Validator for the y attribute.
 """
 
-#!/usr/bin/python3
-""" 2-main """
-from models.rectangle import Rectangle
+from models.base import Base
 
-if __name__ == "__main__":
-    try:
-        Rectangle(10, "2")
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
 
-    try:
-        r = Rectangle(10, 2)
-        r.width = -10
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+class Rectangle(Base):
 
-    try:
-        r = Rectangle(10, 2)
-        r.x = {}
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+    """Rectangle class"""
 
-    try:
-        Rectangle(10, 2, 3, -1)
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """Initialize a new rectangle"""
+        super().__init__(id)
+        self.__validate_width(width)
+        self.__validate_height(height)
+        self.__validate_x(x)
+        self.__validate_y(y)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+
+    @property
+    def width(self):
+        """Get the width of the rectangle"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Set the width of the rectangle"""
+        self.__validate_width(value)
+        self.__width = value
+
+    @property
+    def height(self):
+        """Get the height of the rectangle"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Set the height of the rectangle"""
+        self.__validate_height(value)
+        self.__height = value
+
+    @property
+    def x(self):
+        """Get the x coordinate of the rectangle"""
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """Set the x coordinate of the rectangle"""
+        self.__validate_x(value)
+        self.__x = value
+
+    @property
+    def y(self):
+        """Get the y coordinate of the rectangle"""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """Set the y coordinate of the rectangle"""
+        self.__validate_y(value)
+        self.__y = value
+
+    def __validate_width(self, width):
+        """Validator for the width attribute."""
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
+
+    def __validate_height(self, height):
+        """Validator for the height attribute."""
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
+
+    def __validate_x(self, x):
+        """Validator for the x attribute."""
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+
+    def __validate_y(self, y):
+        """Validator for the y attribute."""
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
