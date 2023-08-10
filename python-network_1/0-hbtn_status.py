@@ -1,7 +1,6 @@
 """This module fetches the status of the HTB intranet and prints the body of the response."""
 
 import requests
-import json
 
 
 class HTBStatus:
@@ -9,16 +8,12 @@ class HTBStatus:
 
     def __init__(self):
         """Initializes the HTBStatus object."""
-        self.response = requests.get("https://intranet.hbtn.io/status")
+        self.response = requests.get("https://alu-intranet.hbtn.io/status")
 
     def get_body(self):
-        """Gets the body of the response and decodes it as JSON.
-
-        Returns:
-          A dictionary containing the response data.
-        """
+        """Gets the body of the response."""
         if self.response.status_code == 200:
-            return json.loads(self.response.content.decode())
+            return self.response.content
         else:
             return None
 
