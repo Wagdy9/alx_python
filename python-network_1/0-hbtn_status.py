@@ -3,32 +3,16 @@
 import requests
 
 
-class HTBStatus:
-    """Gets the status of the HTB intranet."""
-
-    def __init__(self):
-        """Initializes the HTBStatus object."""
-        self.response = requests.get("https://alu-intranet.hbtn.io/status")
-
-    def get_body(self):
-        """Gets the body of the response."""
-        if self.response.status_code == 200:
-            return self.response.content
-        else:
-            return None
-
-
-def main():
-    """Prints the body of the response."""
-    hbtn_status = HTBStatus()
-    body = hbtn_status.get_body()
-    if body:
-        print("Body response:\n")
-        for key, value in body.items():
-            print(f"  - {key}: {value}")
-    else:
-        print("No status information available.")
+def get_status():
+    response = requests.get("https://intranet.hbtn.io/status")
+    content = response.content.decode("utf-8")
+    return content
 
 
 if __name__ == "__main__":
-    main()
+    print("Body response:")
+    print("\t- type: {_type}".format(_type=type(content)))
+    print("\t- content: {_content}".format(_content=content))
+    print("\t- utf8 content: {_utf8_c}".format(_utf8_c=content))
+
+print(get_status())
