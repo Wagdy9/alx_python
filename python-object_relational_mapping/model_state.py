@@ -14,7 +14,8 @@ class State(Base):
 
     Args:
         Base (DeclarativeMeta): The base class.
-        """
-    __tablename__ = 'states'
+    """
+
+    __tablename__ = "states"
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(128), nullable=False)
