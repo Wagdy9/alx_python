@@ -1,12 +1,22 @@
-""" An empty class representing the base geometry."""
+"""
+This module defines the Rectangle class.
+
+The Rectangle class inherits from the BaseGeometry class. It has two private attributes: width and height. These attributes are validated by the integer_validator() method from the BaseGeometry class.
+
+The Rectangle class has an area() method that calculates the area of the rectangle.
+"""
 
 
-class BaseMetaClass(type):
-    """
-    overrides.
-    """
+class definitionOverrideMetaClass(type):
+    """def __new__(cls, name, bases, attrs):
+    # Customize the class creation process here
+    return super().__new__(cls, name, bases, attrs)"""
 
     def __dir__(cls):
+        """
+        Returns:
+            list: List of attributes excluding __init_subclass__.
+        """
         return [
             attribute
             for attribute in super().__dir__()
@@ -14,56 +24,79 @@ class BaseMetaClass(type):
         ]
 
 
-class BaseGeometry(metaclass=BaseMetaClass):
-    """
-    Do nothing: By passing pass.
-    """
-
-    def __dir__(cls):
-        return [
-            attribute
-            for attribute in super().__dir__()
-            if attribute != "__init_subclass__"
-        ]
-
-    def area(self):
-        """
-        Public instance method that raises an Exception
-        """
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """
-        Public instance method that validate a value
-        Attr:
-            name(string): the name string.
-            value(int): must be an integer greater than 0.
-        """
-        self.name = name
-        self.value = value
-
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-
-
-"""Rectangle class that inherit from BaseGeometry"""
+BaseGeometry = __import__("5-base_geometry").BaseGeometry
 
 
 class Rectangle(BaseGeometry):
+    """
+    This class defines a rectangle.
 
-    """Initializing with and height"""
+    Attributes:
+        _width (int): The width of the rectangle.
+        _height (int): The height of the rectangle.
+
+    Methods:
+        area(): Calculates the area of the rectangle.
+
+    Raises:
+        AttributeError: If the attribute width or height is accessed.
+        TypeError: If the value of the attribute width or height is not an integer.
+        ValueError: If the value of the attribute width or height is less than or equal to 0.
+    """
 
     def __init__(self, width, height):
-        self.__width = width
-        self.__height = height
+        """
+        Initializes a new rectangle.
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+
+        Raises:
+            TypeError: If the value of the attribute width or height is not an integer.
+            ValueError: If the value of the attribute width or height is less than or equal to 0.
+        """
+        super().__init__()
         self.integer_validator("width", width)
         self.integer_validator("height", height)
+        self._width = width
+        self._height = height
 
     def area(self):
-        return self.__width * self.__height
+        """
+        Calculates the area of the rectangle.
+
+        Returns:
+            int: The area of the rectangle.
+        """
+        return self._width * self._height
 
     def __str__(self):
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        """
+        Returns the rectangle description.
+
+        Returns:
+            str: The rectangle description in the format [Rectangle] <width>/<height>.
+        """
+        return "[Rectangle] {}/{}".format(self._width, self._height)
+
+    # Prevents the attributes width and height from being accessed directly.
+    """
+    def __getattribute__(self, name):
+        if name in ["_width", "_height"]:
+            raise AttributeError("'Rectangle' object has no attribute '{}'".format(name))
+        elif name == "height" and not isinstance(object.__getattribute__(self, "_height"), int):
+            raise TypeError("height must be an integer")
+        return super().__getattribute__(name)
+    """
+
+    def __dir__(cls):
+        """
+        Returns:
+            list: List of attributes excluding __init_subclass__.
+        """
+        return [
+            attribute
+            for attribute in super().__dir__()
+            if attribute != "__init_subclass__"
+        ]
